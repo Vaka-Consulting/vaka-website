@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "title": "Blockchain Web3",
+      "subtitle": "Empowa",
+      "image": "",
+      "shortDescription": "Vaka Consulting specialise in the design and development of software solutions, primarily using blockchain and decentralised technology, to support businesses delivering socially positive products.",
+      "description": "Vaka Consulting is the lead technology partner implementing the Empowa platform that uses tokenised finance products to fund affordable housing.  In 2022 the Empowa platform was used to finance climate smart homes for 30 families in Beira, Mozambique. More than 50% were women led households and the average client age was 20 years younger than for traditional finance.",
+      "externalLink": "https://empowa.io"
+    },
+    {
+      "title": "Impact Data Reporting",
+      "subtitle": "ClimaFi Partner Profile",
+      "image": "",
+      "shortDescription": "Vaka Consulting specialise in the design and development of software solutions, primarily using blockchain and decentralised technology, to support businesses delivering socially positive products.",
+      "description": "Vaka Consulting is the lead technology partner implementing the Empowa platform that uses tokenised finance products to fund affordable housing.  In 2022 the Empowa platform was used to finance climate smart homes for 30 families in Beira, Mozambique. More than 50% were women led households and the average client age was 20 years younger than for traditional finance.",
+      "externalLink": "https://climafi.world"
+    }
+  ]
+}

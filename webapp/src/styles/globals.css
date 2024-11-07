@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #092F4B;
+  --foreground: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  @apply font-body text-base bg-primary;
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display text-base;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .card {
+    @apply px-8 py-10 bg-white text-black rounded-xl
+  }
+
+  .btn {
+    @apply inline-block py-1 px-4 bg-transparent text-black text-sm rounded-md border-2 border-black uppercase font-semibold
+  }
+
+  .section {
+    @apply py-10
+  }
+}

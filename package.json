@@ -1,0 +1,17 @@
+{
+  "name": "vaka-consultancy-website",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.2",
+  "engines": {
+    "node": ">=18.18.x"
+  },
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"cd server && pnpm dev\" \"cd webapp && pnpm dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "prettier": "^3.3.3"
+  }
+}

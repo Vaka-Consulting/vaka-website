@@ -1,0 +1,25 @@
+{
+  "name": "vaka-consultancy-website-server",
+  "description": "Vaka Consultancy Website Server with Keystone.js CMS",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.2",
+  "engines": {
+    "node": ">=18.18.x"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "PORT=8000 keystone dev",
+    "start": "keystone start",
+    "build": "keystone build"
+  },
+  "dependencies": {
+    "@keystone-6/auth": "^8.0.0",
+    "@keystone-6/core": "^6.0.0",
+    "@keystone-6/fields-document": "^9.0.0",
+    "@prisma/client": "5.19.0",
+    "typescript": "^5.5.0"
+  },
+  "devDependencies": {
+    "prisma": "5.19.0"
+  }
+}

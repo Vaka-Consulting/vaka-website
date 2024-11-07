@@ -1,0 +1,23 @@
+{
+  "siteTitle": "Vaka Consulting",
+  "sections": {
+    "hero": {
+      "title": "Vaka Consulting",
+      "content": [
+        "1",
+        "2"
+      ]
+    },
+    "about": {},
+    "work": {},
+    "contact": {}
+  },
+  "footer": {
+    "content": [
+      "1",
+      "2"
+    ],
+    "twitter": "",
+    "linkedin": ""
+  }
+}
