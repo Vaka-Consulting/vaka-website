@@ -4,7 +4,7 @@ WebApp - Next.js App
 
 ## Running the example
 
-1. Install dependencies
+1 - Install dependencies
 
 Make sure you are at the root of the repo and install dependencies.
 
@@ -12,8 +12,7 @@ Make sure you are at the root of the repo and install dependencies.
 pnpm install
 ```
 
-2. Start
-
+2 - Start
 Navigate from repo root and start the servers.
 
 ```shell
