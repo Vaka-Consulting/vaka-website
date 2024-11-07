@@ -20,6 +20,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+ run:
+  working-directory: ./webapp 
+
 jobs:
   # Build job
   build:
@@ -33,9 +37,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-          cache: pnpm
-      - name: Change Directory to WebApp with NextJs
-        run: cd webapp          
+          cache: pnpm      
       - name: Setup Pages
         run: exit 0
         # uses: actions/configure-pages@v5
