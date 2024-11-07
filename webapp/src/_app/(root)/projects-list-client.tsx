@@ -6,4 +6,4 @@ function ProjectsListClient() {
   return <ProjectsList />;
 }
 
-export default ProjectsList;
+export default ProjectsListClient;

@@ -4,7 +4,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "@/styles/globals.css";
 import { Oxanium, Open_Sans } from "next/font/google";
 import { Layout } from "@/components";
-import { useEffect } from "react";
 
 const oxanium = Oxanium({
   subsets: ["latin"],

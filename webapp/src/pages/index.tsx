@@ -1,6 +1,7 @@
-import { Hero } from "@/components";
 import { clsx } from "clsx";
 import Image from "next/image";
+import { Hero } from "@/components";
+import { BASE_PATH } from "../../config";
 
 const twoColClassNames = "grid grid-cols-6 gap-8";
 const firstColClassNames = "col-start-1 col-end-3";
@@ -39,7 +40,7 @@ export default function HomePage() {
               </header>
               <figure className="relative w-full">
                 <Image
-                  src="/project-empowa.jpg"
+                  src={`/${BASE_PATH}/project-empowa.jpg`}
                   alt="Project Empowa Image"
                   sizes="100vw"
                   width={0}
@@ -82,7 +83,7 @@ export default function HomePage() {
               </header>
               <figure className="relative w-full">
                 <Image
-                  src="/project-climafi.jpg"
+                  src={`/${BASE_PATH}/project-climafi.jpg`}
                   alt="Project ClimaFi Image"
                   width={0}
                   height={0}
@@ -123,7 +124,7 @@ export default function HomePage() {
             </header>
             <figure className="relative w-full">
               <Image
-                src="/contact.jpg"
+                src={`/${BASE_PATH}/contact.jpg`}
                 alt="Project Empowa Image"
                 width={0}
                 height={0}
