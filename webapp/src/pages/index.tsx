@@ -3,17 +3,24 @@ import Image from "next/image";
 import { Hero } from "@/components";
 import { BASE_PATH } from "../../config";
 
-const twoColClassNames = "grid grid-cols-6 gap-8";
-const firstColClassNames = "col-start-1 col-end-3";
-const secondColClassNames = "col-start-3 col-end-7";
+const twoColClassNames = "md:grid md:grid-cols-6 md:gap-8";
+const firstColClassNames = "md:col-start-1 md:col-end-3";
+const secondColClassNames = "md:col-start-3 md:col-end-7";
+const sectionHeadingClassNames =
+  "mb-2 sm:mb-0 text-2xl md:text-3xl lg:text-4xl";
 
-export default function HomePage() {
+const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
+
+function HomePage() {
   return (
     <>
       <section id="hero" className="container section">
         <Hero className="mx-auto" />
       </section>
-      <section id="about" className="container section text-justify px-20">
+      <section
+        id="about"
+        className="container section text-justify px-12 sm:px-14 md:px-20"
+      >
         <p className="font-medium">
           In an ocean of information, navigating technology options can be
           daunting for modern businesses. For millennia, Polynesian Wayfinders
@@ -26,10 +33,11 @@ export default function HomePage() {
           <li className="card">
             <article className="flex flex-wrap gap-8">
               <header className={twoColClassNames}>
-                <h3 className={clsx(firstColClassNames, "text-4xl")}>
-                  Blockchain
-                  <br />
-                  <span className="font-extralight">Web3</span>
+                <h3
+                  className={clsx(firstColClassNames, sectionHeadingClassNames)}
+                >
+                  Blockchain{" "}
+                  <span className="font-extralight md:block">Web3</span>
                 </h3>
                 <p className={secondColClassNames}>
                   Vaka Consulting specialise in the design and development of
@@ -40,7 +48,7 @@ export default function HomePage() {
               </header>
               <figure className="relative w-full">
                 <Image
-                  src={`/${BASE_PATH}/project-empowa.jpg`}
+                  src={`${pathPrefix}/project-empowa.jpg`}
                   alt="Project Empowa Image"
                   sizes="100vw"
                   width={0}
@@ -51,29 +59,39 @@ export default function HomePage() {
               <div className={twoColClassNames}>
                 <div className={firstColClassNames}>
                   <h2 className="font-bold">Empowa</h2>
-                  <a href="#" target="_blank" className="btn mt-2">
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="btn mt-2 hidden md:inline-block"
+                  >
                     Visit project
                   </a>
                 </div>
                 <div className={secondColClassNames}>
                   Vaka Consulting is the lead technology partner implementing
                   the Empowa platform that uses tokenised finance products to
-                  fund affordable housing.  In 2022 the Empowa platform was used
+                  fund affordable housing. In 2022 the Empowa platform was used
                   to finance climate smart homes for 30 families in Beira,
                   Mozambique. More than 50% were women led households and the
                   average client age was 20 years younger than for traditional
                   finance.
                 </div>
+                <a href="#" target="_blank" className="btn mt-4 md:hidden">
+                  Visit project
+                </a>
               </div>
             </article>
           </li>
           <li className="card">
             <article className="flex flex-wrap gap-8">
               <header className={twoColClassNames}>
-                <h3 className={clsx(firstColClassNames, "text-4xl")}>
-                  Impact
-                  <br />
-                  <span className="font-extralight">Data Reporting</span>
+                <h3
+                  className={clsx(firstColClassNames, sectionHeadingClassNames)}
+                >
+                  Impact{" "}
+                  <span className="font-extralight md:block">
+                    Data Reporting
+                  </span>
                 </h3>
                 <p className={secondColClassNames}>
                   But we are more than just a technology partner. Like the Vaka
@@ -83,7 +101,7 @@ export default function HomePage() {
               </header>
               <figure className="relative w-full">
                 <Image
-                  src={`/${BASE_PATH}/project-climafi.jpg`}
+                  src={`${pathPrefix}/project-climafi.jpg`}
                   alt="Project ClimaFi Image"
                   width={0}
                   height={0}
@@ -94,7 +112,11 @@ export default function HomePage() {
               <div className={twoColClassNames}>
                 <div className={firstColClassNames}>
                   <h2 className="font-bold">ClimaFi Partner Profile</h2>
-                  <a href="#" target="_blank" className="btn mt-2">
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="btn mt-2 hidden md:inline-block"
+                  >
                     Visit project
                   </a>
                 </div>
@@ -102,6 +124,9 @@ export default function HomePage() {
                   Text about ClimafiText about ClimafiText about ClimafiText
                   about ClimafiText about ClimafiText about Climafi
                 </div>
+                <a href="#" target="_blank" className="btn mt-4 md:hidden">
+                  Visit project
+                </a>
               </div>
             </article>
           </li>
@@ -111,10 +136,10 @@ export default function HomePage() {
         <div className="card bg-secondary text-white">
           <article className="flex flex-col flex-wrap gap-8">
             <header className={twoColClassNames}>
-              <h3 className={clsx(firstColClassNames, "text-4xl")}>
-                Get in
-                <br />
-                <span className="font-extralight">Touch</span>
+              <h3
+                className={clsx(firstColClassNames, sectionHeadingClassNames)}
+              >
+                Get in <span className="font-extralight md:block">Touch</span>
               </h3>
               <p className={secondColClassNames}>
                 But we are more than just a technology partner. Like the Vaka
@@ -124,7 +149,7 @@ export default function HomePage() {
             </header>
             <figure className="relative w-full">
               <Image
-                src={`/${BASE_PATH}/contact.jpg`}
+                src={`${pathPrefix}/contact.jpg`}
                 alt="Project Empowa Image"
                 width={0}
                 height={0}
@@ -162,3 +187,5 @@ export default function HomePage() {
     </>
   );
 }
+
+export default HomePage;
