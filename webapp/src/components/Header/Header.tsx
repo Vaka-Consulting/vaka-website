@@ -3,11 +3,11 @@ import { Menu, Logo } from "@/components";
 
 export function Header() {
   return (
-    <div className="flex items-center justify-center py-5">
+    <div className="flex items-center justify-center py-4 flex-col md:flex-row">
       <a href="#">
-        <Logo className="w-[150px] md:w-[125px]  mr-4" />
+        <Logo className="w-[125px]" />
       </a>
-      <nav className="hidden sm:block">
+      <nav className="mt-3 md:mt-0">
         <Menu />
       </nav>
     </div>

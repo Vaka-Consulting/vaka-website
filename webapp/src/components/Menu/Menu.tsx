@@ -6,7 +6,7 @@ const menuItems = [
   { name: "Get in touch", href: "#contact" },
 ];
 
-const classNames = `before:content-['---'] before:mr-4 mr-4`;
+const dividerClassNames = `before:content-dividerHorizontal before:mx-4 sm:before:mx-6 md:before:mx-8 before:inline-block before:top-[-4px] before:relative before:w-[17px] first:before:hidden md:first:before:inline-block`;
 
 export function Menu() {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -29,7 +29,7 @@ export function Menu() {
   return (
     <ul className="flex">
       {menuItems.map((item) => (
-        <li key={item.name} className={classNames}>
+        <li key={item.name} className={dividerClassNames}>
           <a href={item.href} onClick={handleClick}>
             {item.name}
           </a>

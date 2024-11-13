@@ -21,7 +21,7 @@ function HomePage() {
         id="about"
         className="container section text-justify px-12 sm:px-14 md:px-20"
       >
-        <p className="font-medium">
+        <p className="sm:text-lg md:text-xl font-medium">
           In an ocean of information, navigating technology options can be
           daunting for modern businesses. For millennia, Polynesian Wayfinders
           have explored the Pacific aboard the Vaka, a trusted vessel that

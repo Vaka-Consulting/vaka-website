@@ -31,6 +31,9 @@ const config: Config = {
         primary: "#092F4B",
         secondary: "#78909C",
       },
+      content: {
+        dividerHorizontal: 'url("/menu-divider.svg")',
+      },
     },
   },
   plugins: [],
