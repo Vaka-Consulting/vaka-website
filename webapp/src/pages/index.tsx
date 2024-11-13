@@ -14,8 +14,8 @@ const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
 function HomePage() {
   return (
     <>
-      <section id="hero" className="container section">
-        <Hero className="mx-auto" />
+      <section id="hero" className="container section min-h-[50vh] flex">
+        <Hero className="m-auto" />
       </section>
       <section
         id="about"
