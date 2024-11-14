@@ -19,13 +19,19 @@ function HomePage() {
       </section>
       <section
         id="about"
-        className="container section text-justify px-12 sm:px-14 md:px-20"
+        className="container section text-justify px-12 sm:px-14 md:px-20 sm:text-lg md:text-xl font-medium"
       >
-        <p className="sm:text-lg md:text-xl font-medium">
+        <p className="mb-10">
           In an ocean of information, navigating technology options can be
           daunting for modern businesses. For millennia, Polynesian Wayfinders
           have explored the Pacific aboard the Vaka, a trusted vessel that
           carried them to the discovery of idyllic lands on which to settle.
+        </p>
+
+        <p>
+          Vaka Consulting specialise in the design and development of software
+          solutions, primarily using decentralised trust technology, to support
+          businesses delivering socially positive products.
         </p>
       </section>
       <section id="work" className="container section">
@@ -40,15 +46,17 @@ function HomePage() {
                   <span className="font-extralight md:block">Web3</span>
                 </h3>
                 <p className={secondColClassNames}>
-                  Vaka Consulting specialise in the design and development of
-                  software solutions, primarily using blockchain and
-                  decentralised technology, to support businesses delivering
-                  socially positive products.
+                  Blockchain technology offers businesses a way to establish
+                  trust with their clients and stakeholders, through data
+                  transparency, immutable transactions and cryptographic proofs.
+                  Our team has experience supporting projects from concept
+                  through to launch, looking to incorporate web3 technology into
+                  their business systems.
                 </p>
               </header>
               <figure className="relative w-full">
                 <Image
-                  src={`${pathPrefix}/project-empowa.jpg`}
+                  src="https://empowa.io/wp-content/uploads/empowa-brand-image-scaled.jpg"
                   alt="Project Empowa Image"
                   sizes="100vw"
                   width={0}
@@ -68,13 +76,13 @@ function HomePage() {
                   </a>
                 </div>
                 <div className={secondColClassNames}>
-                  Vaka Consulting is the lead technology partner implementing
-                  the Empowa platform that uses tokenised finance products to
-                  fund affordable housing. In 2022 the Empowa platform was used
-                  to finance climate smart homes for 30 families in Beira,
-                  Mozambique. More than 50% were women led households and the
-                  average client age was 20 years younger than for traditional
-                  finance.
+                  As a technology partner to Empowa from their inception, Vaka
+                  Consulting led the development of their tokenised finance
+                  platform to fund affordable housing. In 2022 the Empowa
+                  platform was used to pilot the financing of climate smart
+                  homes for 30 families in Beira, Mozambique. More than 50% were
+                  women led households and the average client age was 20 years
+                  younger than for traditional finance.
                 </div>
                 <a href="#" target="_blank" className="btn mt-4 md:hidden">
                   Visit project
@@ -94,9 +102,10 @@ function HomePage() {
                   </span>
                 </h3>
                 <p className={secondColClassNames}>
-                  But we are more than just a technology partner. Like the Vaka
-                  guided its passengers to their new home, we will accompany you
-                  on your journey towards achieving your mission.
+                  As businesses and investors become more conscious of the
+                  effects of their activities on the world, they look to data as
+                  a source for measuring and if necessary remediating their
+                  impact footprint.
                 </p>
               </header>
               <figure className="relative w-full">
@@ -121,10 +130,18 @@ function HomePage() {
                   </a>
                 </div>
                 <div className={secondColClassNames}>
-                  Text about ClimafiText about ClimafiText about ClimafiText
-                  about ClimafiText about ClimafiText about Climafi
+                  Vaka Consulting have experience innovating in the collection
+                  and presentation of impact data to support businesses looking
+                  to report against their SDG based targets. In addition to
+                  working with various source types (e.g. IoT, GIS,
+                  crowdsourced), we are active in the development of new data
+                  verification tools and processes.
                 </div>
-                <a href="#" target="_blank" className="btn mt-4 md:hidden">
+                <a
+                  href="https://climafi.earth/"
+                  target="_blank"
+                  className="btn mt-4 md:hidden"
+                >
                   Visit project
                 </a>
               </div>
@@ -142,9 +159,9 @@ function HomePage() {
                 Get in <span className="font-extralight md:block">Touch</span>
               </h3>
               <p className={secondColClassNames}>
-                But we are more than just a technology partner. Like the Vaka
-                guided its passengers to their new home, we will accompany you
-                on your journey towards achieving your mission.
+                We are more than just a technology partner. Like the Vaka guided
+                its passengers to their new home, we will accompany you on your
+                journey towards achieving your mission.
               </p>
             </header>
             <figure className="relative w-full">
