@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+import { BASE_PATH } from "./config";
+
+const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
 
 const config: Config = {
   content: [
@@ -32,7 +35,7 @@ const config: Config = {
         secondary: "#78909C",
       },
       content: {
-        dividerHorizontal: 'url("/menu-divider.svg")',
+        dividerHorizontal: `url("${pathPrefix}/menu-divider.svg")`,
       },
     },
   },
