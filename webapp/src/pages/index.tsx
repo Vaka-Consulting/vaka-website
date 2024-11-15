@@ -22,7 +22,7 @@ function HomePage() {
       </section>
       <section
         id="about"
-        className="container section text-justify px-12 sm:px-14 md:px-20 sm:text-lg md:text-xl font-medium"
+        className="container section px-12 sm:px-14 md:px-20 sm:text-lg md:text-xl font-medium"
       >
         <p className="mb-10">
           In an ocean of information, navigating technology options can be
