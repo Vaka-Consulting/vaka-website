@@ -13,7 +13,7 @@ export function Menu() {
     <ul className="flex">
       {menuItems.map((item) => (
         <li key={item.name} className={dividerClassNames}>
-          <a href={item.href} onClick={OnClickScrollToAnchor}>
+          <a className="link" href={item.href} onClick={OnClickScrollToAnchor}>
             {item.name}
           </a>
         </li>

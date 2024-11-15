@@ -39,8 +39,8 @@ function HomePage() {
       </section>
       <section id="work" className="container section">
         <ul className="flex flex-col space-y-12">
-          <li className="card">
-            <article className="flex flex-wrap gap-8">
+          <li>
+            <article className="card text-secondary flex flex-wrap gap-8">
               <header className={twoColClassNames}>
                 <h3
                   className={clsx(firstColClassNames, sectionHeadingClassNames)}
@@ -93,8 +93,8 @@ function HomePage() {
               </div>
             </article>
           </li>
-          <li className="card">
-            <article className="flex flex-wrap gap-8">
+          <li>
+            <article className="card flex flex-wrap gap-8 text-secondary">
               <header className={twoColClassNames}>
                 <h3
                   className={clsx(firstColClassNames, sectionHeadingClassNames)}
@@ -153,7 +153,7 @@ function HomePage() {
         </ul>
       </section>
       <section id="contact" className="container section">
-        <div className="card bg-secondary text-white">
+        <div className="card bg-tertiary text-white">
           <article className="flex flex-col flex-wrap gap-8">
             <header className={twoColClassNames}>
               <h3
@@ -179,22 +179,22 @@ function HomePage() {
             </figure>
             <div>
               <ul className="text-center">
-                <li className="mb-6">
+                <li className="mt-2 mb-6">
                   <h3 className="text-lg">Twitter</h3>
                   <a
                     href="https://twitter.com/vakaconsulting"
                     target="_blank"
-                    className="mt-2"
+                    className="link"
                   >
                     @vakaconsulting
                   </a>
                 </li>
-                <li>
+                <li className="mt-2">
                   <h3 className="text-lg">Email</h3>
                   <a
                     href="mailto:info@vaka.consulting"
                     target="_blank"
-                    className="mt-2"
+                    className="link"
                   >
                     info@vaka.consulting
                   </a>

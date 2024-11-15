@@ -25,31 +25,6 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-display text-base;
 }
 
-a {
-  display: inline-block;
-  position: relative;
-}
-
-a:after {
-  content: '';
-  width: 0;
-  height: 2px;
-  position: absolute;
-  top: 115%;
-  left: 0;
-  background: #fff;
-  transition: 300ms;
-}
-
-a:hover:after {
-  width: 100%;
-}
-
-a:not(:hover):after {
-  right: 0;
-  left: auto;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -61,8 +36,12 @@ a:not(:hover):after {
     @apply px-8 py-10 bg-white text-black rounded-xl
   }
 
+  .link {
+    @apply inline-block relative after:content-[''] after:w-[0] after:h-[2px] after:absolute after:top-[115%] after:left-0 after:bg-white after:duration-300 hover:after:w-full [&:not(:hover)]:after:right-0 [&:not(:hover)]:after:left-auto
+  }
+
   .btn {
-    @apply inline-block py-1 px-4 bg-transparent text-black text-sm rounded-md border-2 border-black uppercase font-semibold
+    @apply inline-block py-2 px-4 bg-transparent text-secondary text-sm rounded-md border-2 border-secondary uppercase font-semibold hover:bg-secondary hover:text-white transition-colors duration-300
   }
 
   .section {

@@ -32,7 +32,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "#092F4B",
-        secondary: "#78909C",
+        secondary: "#475F6B",
+        tertiary: "#78909C",
       },
       backgroundImage: {
         pattern: `url('${pathPrefix}/bg-pattern.webp')`,
