@@ -14,12 +14,15 @@ const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
 function HomePage() {
   return (
     <>
-      <section id="hero" className="container section min-h-[50vh] flex">
-        <Hero className="m-auto" />
+      <section
+        id="hero"
+        className="section min-h-[100vh] flex bg-pattern bg-cover bg-no-repeat"
+      >
+        <Hero className="container m-auto" />
       </section>
       <section
         id="about"
-        className="container section text-justify px-12 sm:px-14 md:px-20 sm:text-lg md:text-xl font-medium"
+        className="container section text-justify px-12 sm:px-14 md:px-20 sm:text-lg md:text-xl font-medium mt-[-120px]"
       >
         <p className="mb-10">
           In an ocean of information, navigating technology options can be

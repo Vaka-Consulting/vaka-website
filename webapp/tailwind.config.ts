@@ -34,6 +34,10 @@ const config: Config = {
         primary: "#092F4B",
         secondary: "#78909C",
       },
+      backgroundImage: {
+        pattern: `url('${pathPrefix}/bg-pattern.webp')`,
+        "hero-boat": `url('${pathPrefix}/boat.webp')`,
+      },
       content: {
         dividerHorizontal: `url("${pathPrefix}/menu-divider.svg")`,
       },
