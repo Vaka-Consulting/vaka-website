@@ -106,9 +106,9 @@ function HomePage() {
                 </h3>
                 <p className={secondColClassNames}>
                   As businesses and investors become more conscious of the
-                  effects of their activities on the world, they look to data as
-                  a source for measuring and if necessary remediating their
-                  impact footprint.
+                  global effects of their activities, they look to data as a
+                  source for measuring and if necessary remediating their impact
+                  footprint.
                 </p>
               </header>
               <figure className="relative w-full">
