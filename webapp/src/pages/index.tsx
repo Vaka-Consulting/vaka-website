@@ -1,15 +1,12 @@
 import { clsx } from "clsx";
 import Image from "next/image";
 import { Hero } from "@/components";
-import { BASE_PATH } from "../../config";
 
 const twoColClassNames = "md:grid md:grid-cols-6 md:gap-8";
 const firstColClassNames = "md:col-start-1 md:col-end-3";
 const secondColClassNames = "md:col-start-3 md:col-end-7";
 const sectionHeadingClassNames =
   "mb-2 sm:mb-0 text-2xl md:text-3xl lg:text-4xl";
-
-const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
 
 function HomePage() {
   return (
@@ -113,7 +110,7 @@ function HomePage() {
               </header>
               <figure className="relative w-full">
                 <Image
-                  src={`${pathPrefix}/project-climafi.jpg`}
+                  src={`/project-climafi.jpg`}
                   alt="Project ClimaFi Image"
                   width={0}
                   height={0}
@@ -169,7 +166,7 @@ function HomePage() {
             </header>
             <figure className="relative w-full">
               <Image
-                src={`${pathPrefix}/contact.jpg`}
+                src={`/contact.jpg`}
                 alt="Project Empowa Image"
                 width={0}
                 height={0}

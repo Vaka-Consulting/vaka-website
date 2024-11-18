@@ -1,6 +1,3 @@
-const pathPrefix =
-  process.env.NODE_ENV === "production" ? "/vaka-website" : undefined;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /**
@@ -14,9 +11,11 @@ const nextConfig = {
    * Set base path. This is the slug of your GitHub repository.
    *
    * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
+   *
+   * NOT NEEDED FOR PRODUCTION WITH CUSTOM DOMAIN
    */
-  basePath: pathPrefix,
-  assetPrefix: "/vaka-website",
+  // basePath: pathPrefix,
+  // assetPrefix: "/vaka-website",
 
   /**
    * Disable server-based image optimization. Next.js does not support

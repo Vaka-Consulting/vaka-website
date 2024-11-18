@@ -1,7 +1,4 @@
 import type { Config } from "tailwindcss";
-import { BASE_PATH } from "./config";
-
-const pathPrefix = process.env.NODE_ENV === "production" ? `/${BASE_PATH}` : "";
 
 const config: Config = {
   content: [
@@ -36,11 +33,11 @@ const config: Config = {
         tertiary: "#78909C",
       },
       backgroundImage: {
-        pattern: `url('${pathPrefix}/bg-pattern.webp')`,
-        "hero-boat": `url('${pathPrefix}/boat.webp')`,
+        pattern: "url('/bg-pattern.webp')",
+        "hero-boat": "url('/boat.webp')",
       },
       content: {
-        dividerHorizontal: `url("${pathPrefix}/menu-divider.svg")`,
+        dividerHorizontal: "url('/menu-divider.svg')",
       },
     },
   },
