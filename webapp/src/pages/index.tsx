@@ -78,13 +78,17 @@ function HomePage() {
                 <div className={secondColClassNames}>
                   As a technology partner to Empowa from their inception, Vaka
                   Consulting led the development of their tokenised finance
-                  platform to fund affordable housing. In 2022 the Empowa
-                  platform was used to pilot the financing of climate smart
-                  homes for 30 families in Beira, Mozambique. More than 50% were
-                  women led households and the average client age was 20 years
-                  younger than for traditional finance.
+                  platform to fund affordable housing. The platform’s pilot
+                  recently financed climate smart homes for 30 families in
+                  Beira, Mozambique. More than 50% were women led households and
+                  the average client age was 20 years younger than for
+                  traditional finance.
                 </div>
-                <a href="#" target="_blank" className="btn mt-4 md:hidden">
+                <a
+                  href="https://empowa.io"
+                  target="_blank"
+                  className="btn mt-4 md:hidden"
+                >
                   Visit project
                 </a>
               </div>
@@ -96,10 +100,7 @@ function HomePage() {
                 <h3
                   className={clsx(firstColClassNames, sectionHeadingClassNames)}
                 >
-                  Impact{" "}
-                  <span className="font-extralight md:block">
-                    Data Reporting
-                  </span>
+                  Impact <span className="font-extralight md:block">Data</span>
                 </h3>
                 <p className={secondColClassNames}>
                   As businesses and investors become more conscious of the
@@ -130,15 +131,15 @@ function HomePage() {
                   </a>
                 </div>
                 <div className={secondColClassNames}>
-                  Vaka Consulting have experience innovating in the collection
-                  and presentation of impact data to support businesses looking
-                  to report against their SDG based targets. In addition to
-                  working with various source types (e.g. IoT, GIS,
-                  crowdsourced), we are active in the development of new data
-                  verification tools and processes.
+                  We have partnered with ClimaFI to innovate in the collection
+                  and presentation of impact data to simplify SDG reporting,
+                  helping SMEs attract impact investment. In addition to working
+                  with various source types (e.g. IoT, GIS, crowdsourced), we
+                  are developing new data verification tools and processes using
+                  decentralised and self sovereign identity technology.
                 </div>
                 <a
-                  href="https://climafi.earth/"
+                  href="https://climafi.earth"
                   target="_blank"
                   className="btn mt-4 md:hidden"
                 >
@@ -176,6 +177,16 @@ function HomePage() {
             </figure>
             <div>
               <ul className="text-center">
+                <li className="mt-2 mb-6">
+                  <h3 className="text-lg">LinkedIn</h3>
+                  <a
+                    href="https://www.linkedin.com/company/vaka-consulting"
+                    target="_blank"
+                    className="link"
+                  >
+                    vaka-consulting
+                  </a>
+                </li>
                 <li className="mt-2 mb-6">
                   <h3 className="text-lg">Twitter</h3>
                   <a

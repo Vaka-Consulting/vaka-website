@@ -41,10 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .btn {
-    @apply inline-block py-2 px-4 bg-transparent text-secondary text-sm rounded-md border-2 border-secondary uppercase font-semibold hover:bg-secondary hover:text-white transition-colors duration-300
+    @apply inline-block py-2 px-4 bg-transparent text-secondary text-sm rounded-md border-2 border-secondary uppercase font-semibold hover:text-white hover:shadow-secondary hover:shadow-[inset_150px_0_0_0] transition-[color,box-shadow] duration-500
   }
 
   .section {
-    @apply py-12
+    @apply py-24
   }
 }
