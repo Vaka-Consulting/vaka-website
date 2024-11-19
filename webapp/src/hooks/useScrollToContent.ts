@@ -8,7 +8,7 @@ interface Section {
 
 const OFFSET = 60;
 
-const useScrollToContent = () => {
+export const useScrollToContent = () => {
   const [activeItem, setActiveItem] = useState<string | undefined>(undefined);
   const sectionsRef = useRef<Section[]>([]);
 
@@ -72,5 +72,3 @@ const useScrollToContent = () => {
 
   return { scrollToContent, activeItem };
 };
-
-export default useScrollToContent;
