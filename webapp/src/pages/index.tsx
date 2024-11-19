@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import Image from "next/image";
 import { Hero } from "@/components";
+import Head from "next/head";
 
 const twoColClassNames = "md:grid md:grid-cols-6 md:gap-8";
 const firstColClassNames = "md:col-start-1 md:col-end-3";
@@ -10,7 +11,25 @@ const sectionHeadingClassNames =
 
 function HomePage() {
   return (
-    <>
+    <div id="main">
+      <Head>
+        <title>Vaka Consulting</title>
+        <meta
+          key="desc"
+          name="description"
+          content="Vaka Consulting specialise in the design and development of software
+          solutions, primarily using decentralised trust technology, to support
+          businesses delivering socially positive products."
+        />
+        <meta property="og:title" content="Vaka Consulting" />
+        <meta
+          property="og:description"
+          content="Vaka Consulting specialise in the design and development of software
+          solutions, primarily using decentralised trust technology, to support
+          businesses delivering socially positive products."
+        />
+        <meta property="og:image" content="/boat.webp" key="image" />
+      </Head>
       <section
         id="hero"
         className="section min-h-[100vh] flex bg-pattern bg-cover bg-no-repeat"
@@ -190,11 +209,11 @@ function HomePage() {
                 <li className="mt-2 mb-6">
                   <h3 className="text-lg">Twitter</h3>
                   <a
-                    href="https://twitter.com/vakaconsulting"
+                    href="https://twitter.com/vaka_consulting"
                     target="_blank"
                     className="link"
                   >
-                    @vakaconsulting
+                    @vaka_consulting
                   </a>
                 </li>
                 <li className="mt-2">
@@ -212,7 +231,7 @@ function HomePage() {
           </article>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

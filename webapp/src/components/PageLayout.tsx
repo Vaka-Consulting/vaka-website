@@ -20,10 +20,8 @@ export default function PageLayout({ children }: { children: ReactNode }) {
 
   const handleBgColorOnScroll = () => {
     if (window.scrollY > 200) {
-      console.log("true");
       setHasBgColor(true);
     } else {
-      console.log("false");
       setHasBgColor(false);
     }
   };
