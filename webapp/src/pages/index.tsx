@@ -1,13 +1,9 @@
-import { clsx } from "clsx";
 import Image from "next/image";
-import { Hero } from "@/components";
+import { clsx } from "clsx";
 import Head from "next/head";
-
-const twoColClassNames = "md:grid md:grid-cols-6 md:gap-8";
-const firstColClassNames = "md:col-start-1 md:col-end-3";
-const secondColClassNames = "md:col-start-3 md:col-end-7";
-const sectionHeadingClassNames =
-  "mb-2 sm:mb-0 text-2xl md:text-3xl lg:text-4xl";
+import { Hero } from "@/components";
+import * as classes from "@/constants/classes";
+import Contact from "@/components/Contact";
 
 function HomePage() {
   return (
@@ -57,14 +53,17 @@ function HomePage() {
         <ul className="flex flex-col space-y-12">
           <li>
             <article className="card text-secondary flex flex-wrap gap-8">
-              <header className={twoColClassNames}>
+              <header className={classes.twoColClassNames}>
                 <h3
-                  className={clsx(firstColClassNames, sectionHeadingClassNames)}
+                  className={clsx(
+                    classes.firstColClassNames,
+                    classes.sectionHeadingClassNames,
+                  )}
                 >
                   Blockchain{" "}
                   <span className="font-extralight md:block">Web3</span>
                 </h3>
-                <p className={secondColClassNames}>
+                <p className={classes.secondColClassNames}>
                   Blockchain technology offers businesses a way to establish
                   trust with their clients and stakeholders, through data
                   transparency, immutable transactions and cryptographic proofs.
@@ -83,8 +82,8 @@ function HomePage() {
                   className="w-full h-auto"
                 />
               </figure>
-              <div className={twoColClassNames}>
-                <div className={firstColClassNames}>
+              <div className={classes.twoColClassNames}>
+                <div className={classes.firstColClassNames}>
                   <h2 className="font-bold">Empowa</h2>
                   <a
                     href="#"
@@ -94,7 +93,7 @@ function HomePage() {
                     Visit project
                   </a>
                 </div>
-                <div className={secondColClassNames}>
+                <div className={classes.secondColClassNames}>
                   As a technology partner to Empowa from their inception, Vaka
                   Consulting led the development of their tokenised finance
                   platform to fund affordable housing. The platform’s pilot
@@ -115,13 +114,16 @@ function HomePage() {
           </li>
           <li>
             <article className="card flex flex-wrap gap-8 text-secondary">
-              <header className={twoColClassNames}>
+              <header className={classes.twoColClassNames}>
                 <h3
-                  className={clsx(firstColClassNames, sectionHeadingClassNames)}
+                  className={clsx(
+                    classes.firstColClassNames,
+                    classes.sectionHeadingClassNames,
+                  )}
                 >
                   Impact <span className="font-extralight md:block">Data</span>
                 </h3>
-                <p className={secondColClassNames}>
+                <p className={classes.secondColClassNames}>
                   As businesses and investors become more conscious of the
                   global effects of their activities, they look to data as a
                   source for measuring and if necessary remediating their impact
@@ -138,8 +140,8 @@ function HomePage() {
                   className="w-full h-auto"
                 />
               </figure>
-              <div className={twoColClassNames}>
-                <div className={firstColClassNames}>
+              <div className={classes.twoColClassNames}>
+                <div className={classes.firstColClassNames}>
                   <h2 className="font-bold">ClimaFi Partner Profile</h2>
                   <a
                     href="#"
@@ -149,7 +151,7 @@ function HomePage() {
                     Visit project
                   </a>
                 </div>
-                <div className={secondColClassNames}>
+                <div className={classes.secondColClassNames}>
                   We have partnered with ClimaFI to innovate in the collection
                   and presentation of impact data to simplify SDG reporting,
                   helping SMEs attract impact investment. In addition to working
@@ -169,67 +171,8 @@ function HomePage() {
           </li>
         </ul>
       </section>
-      <section id="contact" className="container section">
-        <div className="card bg-tertiary text-white">
-          <article className="flex flex-col flex-wrap gap-8">
-            <header className={twoColClassNames}>
-              <h3
-                className={clsx(firstColClassNames, sectionHeadingClassNames)}
-              >
-                Get in <span className="font-extralight md:block">Touch</span>
-              </h3>
-              <p className={secondColClassNames}>
-                We are more than just a technology partner. Like the Vaka guided
-                its passengers to their new home, we will accompany you on your
-                journey towards achieving your mission.
-              </p>
-            </header>
-            <figure className="relative w-full">
-              <Image
-                src={`/contact.jpg`}
-                alt="Project Empowa Image"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto"
-              />
-            </figure>
-            <div>
-              <ul className="text-center">
-                <li className="mt-2 mb-6">
-                  <h3 className="text-lg">LinkedIn</h3>
-                  <a
-                    href="https://www.linkedin.com/company/vaka-consulting"
-                    target="_blank"
-                    className="link"
-                  >
-                    vaka-consulting
-                  </a>
-                </li>
-                <li className="mt-2 mb-6">
-                  <h3 className="text-lg">Twitter</h3>
-                  <a
-                    href="https://twitter.com/vaka_consulting"
-                    target="_blank"
-                    className="link"
-                  >
-                    @vaka_consulting
-                  </a>
-                </li>
-                <li className="mt-2">
-                  <h3 className="text-lg">Email</h3>
-                  <a
-                    href="mailto:info@vaka.consulting"
-                    target="_blank"
-                    className="link"
-                  >
-                    info@vaka.consulting
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
+      <section id="contact" className="container section mb-40">
+        <Contact />
       </section>
     </div>
   );
