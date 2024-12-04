@@ -86,7 +86,7 @@ function HomePage() {
                 <div className={classes.firstColClassNames}>
                   <h2 className="font-bold">Empowa</h2>
                   <a
-                    href="#"
+                    href="https://empowa.io"
                     target="_blank"
                     className="btn mt-2 hidden md:inline-block"
                   >
@@ -142,9 +142,9 @@ function HomePage() {
               </figure>
               <div className={classes.twoColClassNames}>
                 <div className={classes.firstColClassNames}>
-                  <h2 className="font-bold">ClimaFi Partner Profile</h2>
+                  <h2 className="font-bold">ClimaFI</h2>
                   <a
-                    href="#"
+                    href="https://climafi.earth"
                     target="_blank"
                     className="btn mt-2 hidden md:inline-block"
                   >
