@@ -1,17 +1,26 @@
 {
-  "name": "vaka-consultancy-website",
-  "version": "1.0.0",
-  "packageManager": "pnpm@9.12.2",
-  "engines": {
-    "node": ">=18.18.x"
-  },
+  "name": "vaka-consulting-website",
+  "version": "2.0.0",
   "private": true,
-  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
-    "dev": "concurrently \"cd server && pnpm dev\" \"cd webapp && pnpm dev\""
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
-    "concurrently": "^7.3.0",
-    "prettier": "^3.3.3"
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "typescript": "5.9.3"
   }
 }
