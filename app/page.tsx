@@ -1,7 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { ArrowIcon } from "./components/ArrowIcon";
+import { SiteHeader } from "./components/SiteHeader";
+import { TeamProfiles } from "./components/TeamProfiles";
 
 const capabilities = [
   { title: "Technology Strategy & Architecture", text: "Translate business priorities into capability models, target architectures, practical roadmaps and better-informed investment decisions." },
@@ -18,38 +18,6 @@ const approach = [
   { icon: "scale", title: "Scale", text: "Prepare for operations, capability transfer and sustainable expansion." },
 ];
 
-const profiles = [
-  {
-    name: "Phil Lewis",
-    role: "Founder & CEO",
-    lead: "A TOGAF-certified Enterprise Architect with more than 25 years across government, enterprise and startup environments.",
-    text: "Phil combines strategic advice with practical delivery experience across architecture, applications, cloud, integration, security, digital finance and emerging technology. He has held various leadership roles in the Cardano ecosystem, including service on Intersect’s Steering Committee and establishing its Enterprise and Government Adoption Working Group.",
-    focus: "Building technology solutions for humanity.",
-  },
-  {
-    name: "Hung Tran",
-    role: "Head of Strategy and Design",
-    lead: "A creative leader and strategist with experience across multinational corporations and high-growth startups.",
-    text: "Hung’s expertise spans brand identity, product design and user experience. He leads cross-functional teams to build cohesive design systems, strengthen brands and translate complex ideas into elegant, purposeful digital experiences.",
-    focus: "Connecting people, purpose and technology through design.",
-  },
-  {
-    name: "Matt Roberts-Davies",
-    role: "Head of Product and Partnerships",
-    lead: "A fintech and digital finance professional with more than 12 years of leadership across product development, financial inclusion and crowdfunding in Africa.",
-    text: "Matt has built and scaled inclusive-finance technology through partnerships with GIZ, the African Development Bank and regional fintech and crowdfunding initiatives. His experience spans platform strategy, regulatory engagement, financial innovation and donor-funded delivery.",
-    focus: "Designing inclusive finance solutions that can scale.",
-  },
-  {
-    name: "Narayan Maharjan",
-    role: "Head of Technology",
-    lead: "A technology leader specialising in the architecture and development of robust, secure and scalable decentralised systems.",
-    text: "Narayan’s experience spans blockchain and traditional technology stacks, platform engineering, infrastructure deployment, DevSecOps, and Cardano smart-contract design and integration. He holds industry-recognised certifications from Microsoft and Amazon Web Services.",
-    focus: "Engineering security, resilience and scale into every solution.",
-  },
-];
-
-function Arrow() { return <span aria-hidden="true">↗</span>; }
 
 function LinkedInIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 1 0-4 0M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" /></svg>;
@@ -80,54 +48,15 @@ function StepIcon({ type }: { type: string }) {
 }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [profileIndex, setProfileIndex] = useState(0);
-  const [profilesPaused, setProfilesPaused] = useState(false);
-
-  const closeMenu = () => setMenuOpen(false);
-  const showPreviousProfile = () => setProfileIndex((index) => (index - 1 + profiles.length) % profiles.length);
-  const showNextProfile = () => setProfileIndex((index) => (index + 1) % profiles.length);
-  const activeProfile = profiles[profileIndex];
-
-  useEffect(() => {
-    if (profilesPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const timer = window.setInterval(() => setProfileIndex((index) => (index + 1) % profiles.length), 8000);
-    return () => window.clearInterval(timer);
-  }, [profilesPaused, profileIndex]);
-
   return (
-    <main>
-      <header className="site-header">
-        <div className="shell header-inner">
-          <a className="brand" href="#top" aria-label="Vaka Consulting home">
-            <Image src="/assets/vaka-consulting-logo.svg" alt="Vaka Consulting" width={100} height={36} priority />
-          </a>
-          <nav aria-label="Primary navigation">
-            <a href="#capabilities">Capabilities</a><a href="#approach">Approach</a><a href="#work">Work</a><a href="#about">About</a><a className="nav-contact" href="#contact">Get in touch <Arrow /></a>
-          </nav>
-          <button
-            className="menu-toggle"
-            type="button"
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <span /><span /><span />
-          </button>
-          <nav id="mobile-navigation" className={`mobile-nav${menuOpen ? " is-open" : ""}`} aria-label="Mobile navigation">
-            <a href="#capabilities" onClick={closeMenu}>Capabilities</a>
-            <a href="#approach" onClick={closeMenu}>Approach</a>
-            <a href="#work" onClick={closeMenu}>Work</a>
-            <a href="#about" onClick={closeMenu}>About</a>
-            <a className="nav-contact" href="#contact" onClick={closeMenu}>Get in touch <Arrow /></a>
-          </nav>
-        </div>
-      </header>
+    <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <SiteHeader />
+      <main id="main-content" tabIndex={-1}>
 
       <section className="hero" id="top">
         <div className="hero-texture" aria-hidden="true" />
-        <Image className="hero-vaka" src="/assets/vaka-double-hull-transparent.webp" alt="" width={1536} height={1024} aria-hidden="true" />
+        <Image className="hero-vaka" src="/assets/vaka-double-hull-96.webp" alt="" width={96} height={64} aria-hidden="true" />
         <div className="shell hero-grid">
           <div className="hero-copy">
             <h1>Architecture, digital trust and delivery for systems that matter.</h1>
@@ -183,7 +112,7 @@ export default function Home() {
               <p className="case-kicker">Empowa</p><h3>A multi-country finance marketplace supporting affordable housing.</h3>
               <p>Vaka Consulting provided product, architecture and technology leadership from inception, helping establish blockchain-enabled investment and transaction workflows alongside conventional web services.</p>
               <div className="case-meta"><div><span>Role</span><strong>Technology strategy, architecture & delivery</strong></div><div><span>Outcome</span><strong>Climate-smart homes financed in Mozambique</strong></div></div>
-              <a className="text-link" href="https://empowa.io" target="_blank" rel="noreferrer">Visit Empowa <Arrow /></a>
+              <a className="text-link" href="https://empowa.io" target="_blank" rel="noreferrer">Visit Empowa <ArrowIcon /></a>
             </div>
           </article>
           <article className="case-study case-climafi">
@@ -195,7 +124,7 @@ export default function Home() {
                 <div><b>Proof</b><span>Simplifying the measurement, trust and attribution of outcomes</span></div>
                 <div><b>Insight</b><span>Automation and standardisation improves reporting timeliness and reduces audit overheads</span></div>
               </div>
-              <a className="text-link" href="https://climafi.earth" target="_blank" rel="noreferrer">Visit ClimaFI <Arrow /></a>
+              <a className="text-link" href="https://climafi.earth" target="_blank" rel="noreferrer">Visit ClimaFI <ArrowIcon /></a>
             </div>
             <div className="case-image"><Image src="/assets/climafi-home-hero-agriculture.webp" alt="An entrepreneur operating solar-powered agricultural processing equipment" width={1774} height={887} /><span className="case-label">Impact data · Green asset finance</span></div>
           </article>
@@ -218,23 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="profile section-pad" aria-label="Vaka Consulting team">
-        <div className="shell profile-carousel">
-          <article className="profile-grid profile-slide" key={activeProfile.name}>
-            <div className="profile-title"><h2>{activeProfile.name}</h2><span>{activeProfile.role}</span></div>
-            <div className="profile-copy"><p className="lead">{activeProfile.lead}</p><p>{activeProfile.text}</p></div>
-            <p className="profile-focus">{activeProfile.focus}</p>
-          </article>
-          <div className="profile-controls" aria-label="Team profile controls">
-            <button type="button" onClick={showPreviousProfile} aria-label="Previous profile">←</button>
-            <div className="profile-selectors">
-              {profiles.map((profile, index) => <button type="button" className={index === profileIndex ? "is-active" : ""} onClick={() => setProfileIndex(index)} aria-label={`Show ${profile.name} profile`} aria-current={index === profileIndex ? "true" : undefined} key={profile.name} />)}
-            </div>
-            <button className="profile-playback" type="button" onClick={() => setProfilesPaused((paused) => !paused)} aria-label={profilesPaused ? "Play automatic profile rotation" : "Pause automatic profile rotation"} aria-pressed={profilesPaused}>{profilesPaused ? "▶" : "Ⅱ"}</button>
-            <button type="button" onClick={showNextProfile} aria-label="Next profile">→</button>
-          </div>
-        </div>
-      </section>
+      <TeamProfiles />
 
       <section className="contact" id="contact">
         <div className="contact-image" aria-hidden="true" />
@@ -250,6 +163,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
